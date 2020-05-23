@@ -1,0 +1,220 @@
+.menu-button {
+  display: inline-block;
+  padding: .5em;
+  background-color: none;
+  border: none;
+}
+.burger-icon {
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.burger-icon,
+.burger-icon:before,
+.burger-icon:after {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  -webkit-transition-property: background-color, -webkit-transform;
+  -moz-transition-property: background-color, -moz-transform;
+  -o-transition-property: background-color, -o-transform;
+  transition-property: background-color, transform;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.burger-icon:before,
+.burger-icon:after {
+  position: absolute;
+  content: "";
+}
+.burger-icon:before {
+  top: -8px;
+}
+.burger-icon:after {
+  top: 8px;
+}
+.menu-button.is-active .burger-icon {
+  background-color: transparent;
+}
+.menu-button.is-active .burger-icon:before,
+.menu-button.is-active .burger-icon:after {
+  background-color: #000000;
+}
+.menu-button.is-active .burger-icon:before {
+  -webkit-transform: translateY(8px) rotate(45deg);
+  -moz-transform: translateY(8px) rotate(45deg);
+  -ms-transform: translateY(8px) rotate(45deg);
+  -o-transform: translateY(8px) rotate(45deg);
+  transform: translateY(8px) rotate(45deg);
+}
+.menu-button.is-active .burger-icon:after {
+  -webkit-transform: translateY(-8px) rotate(-45deg);
+  -moz-transform: translateY(-8px) rotate(-45deg);
+  -ms-transform: translateY(-8px) rotate(-45deg);
+  -o-transform: translateY(-8px) rotate(-45deg);
+  transform: translateY(-8px) rotate(-45deg);
+}
+.menu-button.is-active .burger-icon::before,
+.menu-button.is-active .burger-icon::after {
+  background-color: #fff;
+}
+body {
+  font-weight: 400;
+  font-size: 1em;
+}
+body,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+}
+h1 {
+  font-size: 3em;
+  line-height: 1em;
+  font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+}
+h5,
+.h5 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4em;
+  line-height: 1.2em;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+h6 {
+  font-size: 1em;
+  font-weight: 600;
+}
+ol {
+  margin-top: 20px;
+}
+.hero {
+  height: 480px;
+  background: url('../img/matkailuauto-bg.jpg') no-repeat center;
+  background-size: cover;
+  color: white;
+}
+.hero > .row {
+  height: 100%;
+  padding-bottom: 70px;
+}
+.hero h5 {
+  margin-top: 0;
+}
+
+#top-bar {
+  width: 100%;
+  position: absolute;
+}
+.top-bar-container {
+  color: white;
+}
+.top-bar-container .sticky {
+  background-color: #000000;
+}
+.top-bar-container .sticky a {
+  color: white;
+}
+.top-bar-container .sticky a:hover {
+  color: #ccc;
+}
+.top-bar-container .front {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.title-bar {
+  background: none;
+  padding: 10px 0px;
+}
+.title-bar img.logo {
+  max-width: 160px;
+  height: auto;
+}
+.sticky {
+  width: 100%;
+}
+.grey {
+  background: #ECECEC;
+  padding: 30px 0px;
+}
+.black {
+  background: #000;
+  padding: 50px 0px;
+  color: white;
+  text-align: center;
+}
+.black img.logo {
+  margin: 30px 0px;
+  max-width: 180px;
+  height: auto;
+}
+.black a {
+  color: white;
+}
+.row .image-grid {
+  margin: 20px 0px 20px 0px;
+}
+.row .image-grid .columns {
+  padding: 0px;
+}
+.row .image-grid .columns img {
+  padding: 4px;
+}
+#overlay {
+  z-index: -99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 100%;
+  height: 1000px;
+}
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  h1 {
+    font-size: 2.25em;
+  }
+  .hero {
+    height: 350px;
+  }
+  .hero > .row {
+    padding-bottom: 40px;
+  }
+}
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+  .hero {
+    height: 400px;
+  }
+  .hero > .row {
+    padding-bottom: 60px;
+  }
+}
+/* Medium and down */
+@media screen and (max-width: 63.9375em) {
+  .top-bar-container .sticky {
+    background-color: #000000;
+  }
+  #example-menu {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  .menu.vertical > li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu.vertical > li a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
