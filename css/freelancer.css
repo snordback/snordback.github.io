@@ -86,6 +86,7 @@ header {
   background: white;
 }
 header .container {
+  min-height: -webkit-fill-available;
   min-height: 100vh;
   display: flex;
   align-items: center;
