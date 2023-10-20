@@ -97,7 +97,7 @@ header img {
 }
 header .arrow {
   position: absolute;
-  bottom: 40px;
+  bottom: 10px;
 }
 header .intro-text {
   color: white;
